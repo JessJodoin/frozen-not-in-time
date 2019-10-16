@@ -1,3 +1,50 @@
 html {
   font-family: "Fredoka One", sans-serif;
 }
+
+.bg {
+  background-image: repeating-linear-gradient(-45deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
+  border-top: 10px solid #b3fbff;
+  border-bottom: 10px solid #b3fbff;
+}
+
+h1 {
+  color: #990073;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+}
+
+p {
+  color: #c09;
+  max-width: 19em;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+}
+
+.btn-ghost {
+  color: #c09;
+  border: 3px solid #990073;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+}
+
+.btn-ghost:hover {
+  color: #c09;
+  background-color: rgba(153, 0, 115, .1);
+  border: 3px solid #990073;
+}
+
+.cone {
+  position: absolute;
+  right: 25%;
+  bottom: 10px;
+}
+
+.mint {
+  position: absolute;
+  right: 21.5%;
+  bottom: 180px;
+}
+
+.choco {
+  position: absolute;
+  right: 21.5%;
+  bottom: 180px;
+}
