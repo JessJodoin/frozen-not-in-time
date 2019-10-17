@@ -11,12 +11,16 @@ html {
 h1 {
   color: #990073;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  transform: rotate(-10deg);
+  transform-origin: left center;
 }
 
 p {
   color: #c09;
   max-width: 19em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  transform: rotate(-6deg);
+  transform-origin: left center;
 }
 
 .btn-ghost {
@@ -29,6 +33,11 @@ p {
   color: #c09;
   background-color: rgba(153, 0, 115, .1);
   border: 3px solid #990073;
+}
+
+.text {
+  filter: blur(0);
+  transition: all .2s linear;
 }
 
 .cone {
@@ -45,6 +54,21 @@ p {
 
 .choco {
   position: absolute;
-  right: 21.5%;
-  bottom: 180px;
+  right: 17%;
+  bottom: 300px;
+  z-index: 3;
+}
+
+.vanilla {
+  position: absolute;
+  right: 25%;
+  bottom: 400px;
+  z-index: 4;
+}
+
+.cherry {
+  position: absolute;
+  right: 42%;
+  bottom: 550px;
+  z-index: 5;
 }
