@@ -4,29 +4,45 @@ html {
 
 .bg {
   background-image: repeating-linear-gradient(-45deg, #c9fcff, #c9fcff 10px, #d4fdff 10px, #d4fdff 20px);
-  border-top: 10px solid #b3fbff;
-  border-bottom: 10px solid #b3fbff;
+  border-top: 8px solid #b3fbff;
+  border-bottom: 8px solid #b3fbff;
 }
 
 h1 {
   color: #990073;
+  position: relative;
+  left: -.15em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
-  transform: rotate(-10deg);
+  transform: rotate(-11deg);
   transform-origin: left center;
+  filter: blur(12px);
+  opacity: 0;
+
+  animation: h1-in .2s 1.2s ease-in forwards;
 }
 
 p {
   color: #c09;
   max-width: 19em;
+  position: relative;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
-  transform: rotate(-6deg);
+  transform: rotate(-7deg);
   transform-origin: left center;
+  filter: blur(12px);
+  opacity: 0;
+
+  animation: p-in .2s 1.2s ease-in forwards;
 }
 
 .btn-ghost {
   color: #c09;
   border: 3px solid #990073;
+  position: relative;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .15);
+  filter: blur(12px);
+  opacity: 0;
+
+  animation: btn-in .2s 1.2s ease-in forwards;
 }
 
 .btn-ghost:hover {
@@ -35,40 +51,143 @@ p {
   border: 3px solid #990073;
 }
 
-.text {
-  filter: blur(0);
-  transition: all .2s linear;
+.ice-cream {
+ min-height: 480px;
+}
+
+.ingredients {
+  width: 180px;
+  height: 180px;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
 }
 
 .cone {
-  position: absolute;
-  right: 25%;
-  bottom: 10px;
+  animation: cone-drop-in .3s ease-in forwards;
 }
 
 .mint {
-  position: absolute;
-  right: 21.5%;
-  bottom: 180px;
+  animation: mint-drop-in .3s .2s ease-in forwards;
 }
 
 .choco {
-  position: absolute;
-  right: 17%;
-  bottom: 300px;
-  z-index: 3;
+  left: 55%;
+  animation: choco-drop-in .3s .4s ease-in forwards;
 }
 
 .vanilla {
-  position: absolute;
-  right: 25%;
-  bottom: 400px;
-  z-index: 4;
+  left: 49%;
+  animation: vanilla-drop-in .3s .6s ease-in forwards;
 }
 
 .cherry {
-  position: absolute;
-  right: 42%;
-  bottom: 550px;
-  z-index: 5;
+  left: 51%;
+  animation: cherry-drop-in .3s .8s ease-in forwards;
+}
+
+@keyframes h1-in {
+
+  0% {
+    transform: rotate(-11deg);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-9deg);
+    filter: blur(0);
+    opacity: 100;
+  }
+
+}
+
+@keyframes p-in {
+
+  0% {
+    transform: rotate(-7deg);
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: rotate(-5deg);
+    filter: blur(0);
+    opacity: 100;
+  }
+
+}
+
+@keyframes btn-in {
+
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+
+  100% {
+    filter: blur(0);
+    opacity: 100;
+  }
+
+}
+
+@keyframes cone-drop-in {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 0;
+  }
+
+}
+
+@keyframes mint-drop-in {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 106px;
+  }
+
+}
+
+@keyframes choco-drop-in {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 193px;
+  }
+
+}
+
+@keyframes vanilla-drop-in {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 266px;
+  }
+
+}
+
+@keyframes cherry-drop-in {
+
+  0% {
+    bottom: 100%;
+  }
+
+  100% {
+    bottom: 350px;
+  }
+
 }
